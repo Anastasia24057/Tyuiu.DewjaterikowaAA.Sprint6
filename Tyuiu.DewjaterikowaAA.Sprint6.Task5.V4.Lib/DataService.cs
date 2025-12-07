@@ -26,7 +26,7 @@ namespace Tyuiu.DewjaterikowaAA.Sprint6.Task5.V4.Lib
                     index++;
                 }
             }
-            numsArray = numsArray.Where(val => ((val % 1 == 0) && (val != 0))).ToArray();
+            numsArray = numsArray.Where(val => val % 1 == 0).ToArray();
             return numsArray;
             
         }
