@@ -8,7 +8,7 @@ namespace Tyuiu.DewjaterikowaAA.Sprint6.Task5.V4
             InitializeComponent();
         }
         DataService ds = new DataService();
-        string path = @"C:\DataSprint5\InPutDataFileTask5V4.txt";
+        string path = @"C:\DataSprint5\InPutDataFileTask5V4(1).txt";
 
         private void buttonDone_DAA_Click(object sender, EventArgs e)
         {
