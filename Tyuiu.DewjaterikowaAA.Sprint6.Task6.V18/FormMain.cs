@@ -1,4 +1,4 @@
-using Tyuiu.DewjaterikowaAA.Sprint6.Task6.V18.Lib; 
+using Tyuiu.DewjaterikowaAA.Sprint6.Task6.V18.Lib;
 namespace Tyuiu.DewjaterikowaAA.Sprint6.Task6.V18
 {
     public partial class FormMain : Form
@@ -15,20 +15,19 @@ namespace Tyuiu.DewjaterikowaAA.Sprint6.Task6.V18
             textBoxResult_DAA.Text = ds.CollectTextFromFile(openFilePath);
         }
 
+        private void buttonOpenFile_DAA_Click(object sender, EventArgs e)
+        {
+            openFileDialogTask_DAA.ShowDialog();
+            openFilePath = openFileDialogTask_DAA.FileName;
+            textBoxInput_DAA.Text = File.ReadAllText(openFilePath);
+            groupBoxInput_DAA.Text = groupBoxInput_DAA.Text + " " + openFileDialogTask_DAA.FileName;
+            buttonDone_DAA.Enabled = true;
+        }
+
         private void buttonHelp_DAA_Click(object sender, EventArgs e)
         {
             FormAbout formAbout = new FormAbout();
             formAbout.ShowDialog();
         }
-
-        private void buttonOpenFile_DAA_Click(object sender, EventArgs e)
-        {
-            openFileDialog_DAA.ShowDialog();
-            openFilePath = openFileDialog_DAA.FileName;
-            textBoxInput_DAA.Text = File.ReadAllText(openFilePath);
-            groupBoxIn_DAA.Text = groupBoxIn_DAA.Text + " " + openFileDialog_DAA.FileName;
-            buttonDone_DAA.Enabled = true;
-        }
-
     }
 }

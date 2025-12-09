@@ -30,180 +30,202 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            panel1 = new Panel();
-            textBoxCond_DAA = new TextBox();
-            textBoxCondition_DAA = new TextBox();
+            panelClick_DAA = new Panel();
             buttonHelp_DAA = new Button();
             buttonDone_DAA = new Button();
             buttonOpenFile_DAA = new Button();
-            panel2 = new Panel();
-            groupBoxIn_DAA = new GroupBox();
-            panel3 = new Panel();
-            splitter1 = new Splitter();
-            openFileDialog_DAA = new OpenFileDialog();
-            toolTip_DAA = new ToolTip(components);
+            panelCondition_DAA = new Panel();
+            groupBoxCondition_DAA = new GroupBox();
+            textBox1 = new TextBox();
+            panelInput_DAA = new Panel();
+            groupBoxInput_DAA = new GroupBox();
             textBoxInput_DAA = new TextBox();
+            panelResult_DAA = new Panel();
             groupBoxResult_DAA = new GroupBox();
             textBoxResult_DAA = new TextBox();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            groupBoxIn_DAA.SuspendLayout();
-            panel3.SuspendLayout();
+            openFileDialogTask_DAA = new OpenFileDialog();
+            toolTipTask_DAA = new ToolTip(components);
+            splitter1 = new Splitter();
+            panelClick_DAA.SuspendLayout();
+            panelCondition_DAA.SuspendLayout();
+            groupBoxCondition_DAA.SuspendLayout();
+            panelInput_DAA.SuspendLayout();
+            groupBoxInput_DAA.SuspendLayout();
+            panelResult_DAA.SuspendLayout();
             groupBoxResult_DAA.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panelClick_DAA
             // 
-            panel1.Controls.Add(textBoxCond_DAA);
-            panel1.Controls.Add(textBoxCondition_DAA);
-            panel1.Controls.Add(buttonHelp_DAA);
-            panel1.Controls.Add(buttonDone_DAA);
-            panel1.Controls.Add(buttonOpenFile_DAA);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(944, 172);
-            panel1.TabIndex = 0;
-            // 
-            // textBoxCond_DAA
-            // 
-            textBoxCond_DAA.Location = new Point(11, 98);
-            textBoxCond_DAA.Multiline = true;
-            textBoxCond_DAA.Name = "textBoxCond_DAA";
-            textBoxCond_DAA.ReadOnly = true;
-            textBoxCond_DAA.Size = new Size(907, 68);
-            textBoxCond_DAA.TabIndex = 4;
-            textBoxCond_DAA.Text = resources.GetString("textBoxCond_DAA.Text");
-            // 
-            // textBoxCondition_DAA
-            // 
-            textBoxCondition_DAA.Location = new Point(10, 67);
-            textBoxCondition_DAA.Name = "textBoxCondition_DAA";
-            textBoxCondition_DAA.ReadOnly = true;
-            textBoxCondition_DAA.Size = new Size(125, 27);
-            textBoxCondition_DAA.TabIndex = 3;
-            textBoxCondition_DAA.Text = "Условие";
+            panelClick_DAA.Controls.Add(buttonHelp_DAA);
+            panelClick_DAA.Controls.Add(buttonDone_DAA);
+            panelClick_DAA.Controls.Add(buttonOpenFile_DAA);
+            panelClick_DAA.Dock = DockStyle.Top;
+            panelClick_DAA.Location = new Point(0, 0);
+            panelClick_DAA.Name = "panelClick_DAA";
+            panelClick_DAA.Size = new Size(909, 82);
+            panelClick_DAA.TabIndex = 1;
             // 
             // buttonHelp_DAA
             // 
-            buttonHelp_DAA.Location = new Point(823, 15);
+            buttonHelp_DAA.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonHelp_DAA.Image = Properties.Resources.information;
+            buttonHelp_DAA.Location = new Point(768, 17);
             buttonHelp_DAA.Name = "buttonHelp_DAA";
-            buttonHelp_DAA.Size = new Size(95, 57);
+            buttonHelp_DAA.Size = new Size(103, 59);
             buttonHelp_DAA.TabIndex = 2;
-            buttonHelp_DAA.Text = "button3";
+            toolTipTask_DAA.SetToolTip(buttonHelp_DAA, "Информация о разработчике");
             buttonHelp_DAA.UseVisualStyleBackColor = true;
             buttonHelp_DAA.Click += buttonHelp_DAA_Click;
             // 
             // buttonDone_DAA
             // 
             buttonDone_DAA.Image = Properties.Resources.application_go;
-            buttonDone_DAA.Location = new Point(105, 9);
+            buttonDone_DAA.Location = new Point(126, 15);
             buttonDone_DAA.Name = "buttonDone_DAA";
-            buttonDone_DAA.Size = new Size(84, 59);
+            buttonDone_DAA.Size = new Size(124, 61);
             buttonDone_DAA.TabIndex = 1;
-            toolTip_DAA.SetToolTip(buttonDone_DAA, "Производит поиск в файле вхождений символов и конкатенирует те строки, в которых находятся данные символы");
+            toolTipTask_DAA.SetToolTip(buttonDone_DAA, "Производит поиск в файле вхождений слов с буквой \"n\" и контактенирует строки, в которых находятся эти слова");
             buttonDone_DAA.UseVisualStyleBackColor = true;
             buttonDone_DAA.Click += buttonDone_DAA_Click;
             // 
             // buttonOpenFile_DAA
             // 
-            buttonOpenFile_DAA.Location = new Point(8, 9);
+            buttonOpenFile_DAA.Image = Properties.Resources.folder_explore;
+            buttonOpenFile_DAA.Location = new Point(7, 14);
             buttonOpenFile_DAA.Name = "buttonOpenFile_DAA";
-            buttonOpenFile_DAA.Size = new Size(91, 59);
+            buttonOpenFile_DAA.Size = new Size(114, 62);
             buttonOpenFile_DAA.TabIndex = 0;
-            buttonOpenFile_DAA.Text = "button1";
-            toolTip_DAA.SetToolTip(buttonOpenFile_DAA, "Открыть файл\r\nВыберите нужный файд для обработки\r\n\r\n\r\n");
-            buttonOpenFile_DAA.UseVisualStyleBackColor = true;
+            toolTipTask_DAA.SetToolTip(buttonOpenFile_DAA, "Открыть файл\r\nВыберите нужный файл для обработки\r\n\r\n");
             buttonOpenFile_DAA.Click += buttonOpenFile_DAA_Click;
             // 
-            // panel2
+            // panelCondition_DAA
             // 
-            panel2.Controls.Add(groupBoxIn_DAA);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 172);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(334, 330);
-            panel2.TabIndex = 0;
+            panelCondition_DAA.Controls.Add(groupBoxCondition_DAA);
+            panelCondition_DAA.Dock = DockStyle.Top;
+            panelCondition_DAA.Location = new Point(0, 82);
+            panelCondition_DAA.Name = "panelCondition_DAA";
+            panelCondition_DAA.Size = new Size(909, 87);
+            panelCondition_DAA.TabIndex = 2;
             // 
-            // groupBoxIn_DAA
+            // groupBoxCondition_DAA
             // 
-            groupBoxIn_DAA.Controls.Add(textBoxInput_DAA);
-            groupBoxIn_DAA.Location = new Point(9, 7);
-            groupBoxIn_DAA.Name = "groupBoxIn_DAA";
-            groupBoxIn_DAA.Size = new Size(319, 320);
-            groupBoxIn_DAA.TabIndex = 0;
-            groupBoxIn_DAA.TabStop = false;
-            groupBoxIn_DAA.Text = "Ввод";
+            groupBoxCondition_DAA.Controls.Add(textBox1);
+            groupBoxCondition_DAA.Dock = DockStyle.Fill;
+            groupBoxCondition_DAA.Location = new Point(0, 0);
+            groupBoxCondition_DAA.Name = "groupBoxCondition_DAA";
+            groupBoxCondition_DAA.Size = new Size(909, 87);
+            groupBoxCondition_DAA.TabIndex = 0;
+            groupBoxCondition_DAA.TabStop = false;
+            groupBoxCondition_DAA.Text = "Условие";
             // 
-            // panel3
+            // textBox1
             // 
-            panel3.Controls.Add(groupBoxResult_DAA);
-            panel3.Controls.Add(splitter1);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(334, 172);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(610, 330);
-            panel3.TabIndex = 1;
+            textBox1.Dock = DockStyle.Fill;
+            textBox1.Location = new Point(3, 23);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(903, 61);
+            textBox1.TabIndex = 0;
+            textBox1.Text = resources.GetString("textBox1.Text");
             // 
-            // splitter1
+            // panelInput_DAA
             // 
-            splitter1.Location = new Point(0, 0);
-            splitter1.Name = "splitter1";
-            splitter1.Size = new Size(4, 330);
-            splitter1.TabIndex = 0;
-            splitter1.TabStop = false;
+            panelInput_DAA.Controls.Add(groupBoxInput_DAA);
+            panelInput_DAA.Dock = DockStyle.Left;
+            panelInput_DAA.Location = new Point(0, 169);
+            panelInput_DAA.Name = "panelInput_DAA";
+            panelInput_DAA.Size = new Size(250, 339);
+            panelInput_DAA.TabIndex = 3;
             // 
-            // openFileDialog_DAA
+            // groupBoxInput_DAA
             // 
-            openFileDialog_DAA.FileName = "openFileDialog1";
-            // 
-            // toolTip_DAA
-            // 
-            toolTip_DAA.ToolTipIcon = ToolTipIcon.Info;
-            toolTip_DAA.ToolTipTitle = "Подсказка";
+            groupBoxInput_DAA.Controls.Add(textBoxInput_DAA);
+            groupBoxInput_DAA.Dock = DockStyle.Fill;
+            groupBoxInput_DAA.Location = new Point(0, 0);
+            groupBoxInput_DAA.Name = "groupBoxInput_DAA";
+            groupBoxInput_DAA.Size = new Size(250, 339);
+            groupBoxInput_DAA.TabIndex = 0;
+            groupBoxInput_DAA.TabStop = false;
+            groupBoxInput_DAA.Text = "Ввод";
             // 
             // textBoxInput_DAA
             // 
-            textBoxInput_DAA.Location = new Point(9, 27);
+            textBoxInput_DAA.Dock = DockStyle.Fill;
+            textBoxInput_DAA.Location = new Point(3, 23);
             textBoxInput_DAA.Multiline = true;
             textBoxInput_DAA.Name = "textBoxInput_DAA";
-            textBoxInput_DAA.Size = new Size(295, 284);
+            textBoxInput_DAA.ScrollBars = ScrollBars.Vertical;
+            textBoxInput_DAA.Size = new Size(244, 313);
             textBoxInput_DAA.TabIndex = 0;
+            // 
+            // panelResult_DAA
+            // 
+            panelResult_DAA.Controls.Add(groupBoxResult_DAA);
+            panelResult_DAA.Dock = DockStyle.Fill;
+            panelResult_DAA.Location = new Point(250, 169);
+            panelResult_DAA.Name = "panelResult_DAA";
+            panelResult_DAA.Size = new Size(659, 339);
+            panelResult_DAA.TabIndex = 4;
             // 
             // groupBoxResult_DAA
             // 
             groupBoxResult_DAA.Controls.Add(textBoxResult_DAA);
-            groupBoxResult_DAA.Location = new Point(10, 7);
+            groupBoxResult_DAA.Dock = DockStyle.Fill;
+            groupBoxResult_DAA.Location = new Point(0, 0);
             groupBoxResult_DAA.Name = "groupBoxResult_DAA";
-            groupBoxResult_DAA.Size = new Size(588, 311);
-            groupBoxResult_DAA.TabIndex = 1;
+            groupBoxResult_DAA.Size = new Size(659, 339);
+            groupBoxResult_DAA.TabIndex = 0;
             groupBoxResult_DAA.TabStop = false;
             groupBoxResult_DAA.Text = "Вывод";
             // 
             // textBoxResult_DAA
             // 
-            textBoxResult_DAA.Location = new Point(11, 31);
+            textBoxResult_DAA.Dock = DockStyle.Fill;
+            textBoxResult_DAA.Location = new Point(3, 23);
             textBoxResult_DAA.Multiline = true;
             textBoxResult_DAA.Name = "textBoxResult_DAA";
-            textBoxResult_DAA.Size = new Size(563, 274);
+            textBoxResult_DAA.ScrollBars = ScrollBars.Vertical;
+            textBoxResult_DAA.Size = new Size(653, 313);
             textBoxResult_DAA.TabIndex = 0;
+            // 
+            // openFileDialogTask_DAA
+            // 
+            openFileDialogTask_DAA.FileName = "openFileDialogTask_DAA";
+            // 
+            // toolTipTask_DAA
+            // 
+            toolTipTask_DAA.ToolTipTitle = "Подсказка";
+            // 
+            // splitter1
+            // 
+            splitter1.Location = new Point(250, 169);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(4, 339);
+            splitter1.TabIndex = 5;
+            splitter1.TabStop = false;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(944, 502);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            ClientSize = new Size(909, 508);
+            Controls.Add(splitter1);
+            Controls.Add(panelResult_DAA);
+            Controls.Add(panelInput_DAA);
+            Controls.Add(panelCondition_DAA);
+            Controls.Add(panelClick_DAA);
             Name = "FormMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 6 | Таск 6 | Вариант 18 | Девятерикова А.А.";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            groupBoxIn_DAA.ResumeLayout(false);
-            groupBoxIn_DAA.PerformLayout();
-            panel3.ResumeLayout(false);
+            panelClick_DAA.ResumeLayout(false);
+            panelCondition_DAA.ResumeLayout(false);
+            groupBoxCondition_DAA.ResumeLayout(false);
+            groupBoxCondition_DAA.PerformLayout();
+            panelInput_DAA.ResumeLayout(false);
+            groupBoxInput_DAA.ResumeLayout(false);
+            groupBoxInput_DAA.PerformLayout();
+            panelResult_DAA.ResumeLayout(false);
             groupBoxResult_DAA.ResumeLayout(false);
             groupBoxResult_DAA.PerformLayout();
             ResumeLayout(false);
@@ -211,20 +233,21 @@
 
         #endregion
 
-        private Panel panel1;
-        private Button buttonHelp_DAA;
-        private Button buttonDone_DAA;
-        private Button buttonOpenFile_DAA;
-        private Panel panel2;
-        private Panel panel3;
-        private Splitter splitter1;
-        private TextBox textBoxCond_DAA;
-        private TextBox textBoxCondition_DAA;
-        private OpenFileDialog openFileDialog_DAA;
-        private ToolTip toolTip_DAA;
-        private GroupBox groupBoxIn_DAA;
+        private Panel panelClick_DAA;
+        private Panel panelCondition_DAA;
+        private GroupBox groupBoxCondition_DAA;
+        private Panel panelInput_DAA;
+        private GroupBox groupBoxInput_DAA;
         private TextBox textBoxInput_DAA;
+        private Panel panelResult_DAA;
         private GroupBox groupBoxResult_DAA;
         private TextBox textBoxResult_DAA;
+        private Button buttonDone_DAA;
+        private Button buttonOpenFile_DAA;
+        private TextBox textBox1;
+        private OpenFileDialog openFileDialogTask_DAA;
+        private ToolTip toolTipTask_DAA;
+        private Button buttonHelp_DAA;
+        private Splitter splitter1;
     }
 }

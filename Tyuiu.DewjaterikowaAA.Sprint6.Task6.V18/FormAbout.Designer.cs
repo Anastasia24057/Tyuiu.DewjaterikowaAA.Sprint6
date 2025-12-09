@@ -28,65 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
-            pictureBox_DAA = new PictureBox();
-            textBoxInfo_DAA = new TextBox();
+            pictureBox1 = new PictureBox();
+            textBox1 = new TextBox();
             buttonOK_DAA = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_DAA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox_DAA
+            // pictureBox1
             // 
-            pictureBox_DAA.Image = (Image)resources.GetObject("pictureBox_DAA.Image");
-            pictureBox_DAA.Location = new Point(12, 14);
-            pictureBox_DAA.Name = "pictureBox_DAA";
-            pictureBox_DAA.Size = new Size(184, 227);
-            pictureBox_DAA.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox_DAA.TabIndex = 0;
-            pictureBox_DAA.TabStop = false;
+            pictureBox1.Image = Properties.Resources.фото;
+            pictureBox1.Location = new Point(8, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(240, 253);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
-            // textBoxInfo_DAA
+            // textBox1
             // 
-            textBoxInfo_DAA.Location = new Point(205, 14);
-            textBoxInfo_DAA.Multiline = true;
-            textBoxInfo_DAA.Name = "textBoxInfo_DAA";
-            textBoxInfo_DAA.Size = new Size(400, 190);
-            textBoxInfo_DAA.TabIndex = 1;
-            textBoxInfo_DAA.Text = "Разработчик: Девятерикова А.А.\r\nГруппа ИИПБ-25-1\r\nПрограмма разработана в рамках изучения языка С#\r\n\r\nТИУ(с) 2025\r\nВШЦТ(с) 2025\r\n\r\nВнутреннее имя: Tyuiu.DewjaterikowaAA.Sprint6.Task6.V18\r\n\r\n\r\n\r\n";
+            textBox1.Location = new Point(254, 12);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(271, 215);
+            textBox1.TabIndex = 1;
+            textBox1.Text = "Разработчик: Девятерикова А. А.\r\nГруппа ИИПБ-25-1\r\nПрограмма разработана в рамках изучения языка С#\r\nТИУ (с) 2025\r\nВШЦТ (с) 2025\r\n";
             // 
             // buttonOK_DAA
             // 
-            buttonOK_DAA.Location = new Point(511, 210);
+            buttonOK_DAA.Location = new Point(431, 233);
             buttonOK_DAA.Name = "buttonOK_DAA";
             buttonOK_DAA.Size = new Size(94, 29);
             buttonOK_DAA.TabIndex = 2;
-            buttonOK_DAA.Text = "Ok";
+            buttonOK_DAA.Text = "OK";
             buttonOK_DAA.UseVisualStyleBackColor = true;
-            buttonOK_DAA.Click += this.buttonOK_DAA_Click;
+            buttonOK_DAA.Click += buttonOK_DAA_Click;
             // 
             // FormAbout
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(612, 244);
+            ClientSize = new Size(531, 274);
             Controls.Add(buttonOK_DAA);
-            Controls.Add(textBoxInfo_DAA);
-            Controls.Add(pictureBox_DAA);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Controls.Add(textBox1);
+            Controls.Add(pictureBox1);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormAbout";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "О пользователе";
-            ((System.ComponentModel.ISupportInitialize)pictureBox_DAA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox_DAA;
-        private TextBox textBoxInfo_DAA;
+        private PictureBox pictureBox1;
+        private TextBox textBox1;
         private Button buttonOK_DAA;
     }
 }
